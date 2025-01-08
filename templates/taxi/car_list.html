@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <ul>
+    {% for car in queryset %}
+      <li>
+        <a href="{% url 'taxi:car_detail' car.id %}">{{ car.model }} {{ car.manufacturer.name }} -> {{ car.manufacturer.country }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
