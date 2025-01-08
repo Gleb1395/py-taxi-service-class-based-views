@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
   <ul>
-    {% for car in queryset %}
+    {% for car in car_list %}
       <li>
-        <a href="{% url 'taxi:car_detail' car.id %}">{{ car.model }} {{ car.manufacturer.name }} -> {{ car.manufacturer.country }}</a>
+        <a href="{% url 'taxi:car-detail' car.id %}">{{ car.model }} {{ car.manufacturer.name }} -> {{ car.manufacturer.country }}</a>
       </li>
     {% endfor %}
   </ul>
